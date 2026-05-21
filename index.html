@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Advanced AI Security Analytics Platform
+    </title>
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>
+            <i class="fa-solid fa-shield-halved"></i>
+            Advanced AI Security Analytics Platform
+        </h1>
+
+        <!-- Input Box -->
+        <div class="input-box">
+
+            <input type="text"
+            id="ip"
+            placeholder="Enter IP Address">
+
+            <input type="text"
+            id="activity"
+            placeholder="Enter Threat Activity">
+
+            <button onclick="analyzeThreat()">
+                Analyze Threat
+            </button>
+
+        </div>
+
+        <!-- Loading -->
+        <div class="loading" id="loading">
+
+            <p>🔍 Analyzing Threat...</p>
+            <p>🤖 Connecting AI Engine...</p>
+            <p>📡 Scanning Network Logs...</p>
+            <p>⚡ Generating Security Report...</p>
+
+        </div>
+
+        <!-- Result -->
+        <div class="result-box" id="resultBox">
+
+            <h2>AI Threat Analysis Report</h2>
+
+            <div class="threat-status"
+            id="threatStatus">
+
+                🔴 CRITICAL THREAT DETECTED
+
+            </div>
+
+            <div class="details">
+
+                <p>
+                    <strong>IP Address :</strong>
+                    <span id="resIp"></span>
+                </p>
+
+                <p>
+                    <strong>Activity :</strong>
+                    <span id="resActivity"></span>
+                </p>
+
+                <p>
+                    <strong>Threat Level :</strong>
+                    <span id="riskLevel"></span>
+                </p>
+
+                <p>
+                    <strong>AI Confidence :</strong>
+                    <span id="confidence"></span>
+                </p>
+
+                <p>
+                    <strong>Threat Score :</strong>
+                    <span id="score"></span>
+                </p>
+
+                <p>
+                    <strong>Target Port :</strong>
+                    <span id="port"></span>
+                </p>
+
+                <p>
+                    <strong>Attack Attempts :</strong>
+                    <span id="attempts"></span>
+                </p>
+
+                <p>
+                    <strong>Attack Origin :</strong>
+                    <span id="country"></span>
+                </p>
+
+                <p>
+                    <strong>Status :</strong>
+                    ACTIVE ATTACK DETECTED
+                </p>
+
+                <p>
+                    <strong>Detected Time :</strong>
+                    <span id="time"></span>
+                </p>
+
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+
+                <div class="progress-bar"
+                id="progressBar"></div>
+
+            </div>
+
+            <!-- AI Recommendation -->
+            <div class="ai-box">
+
+                <h3>🤖 AI Recommendation</h3>
+
+                <p id="recommendation"></p>
+
+            </div>
+
+            <!-- Recommended Actions -->
+            <div class="recommendations">
+
+                <h3>Recommended Actions</h3>
+
+                <ul>
+                    <li>✔ Block IP Address</li>
+                    <li>✔ Enable Firewall Rules</li>
+                    <li>✔ Monitor Database Logs</li>
+                    <li>✔ Start Real-Time Tracking</li>
+                </ul>
+
+            </div>
+
+            <!-- Logs -->
+            <div class="logs">
+
+                <h3>Live Threat Logs</h3>
+
+                <p>[08:42] Suspicious Login Detected</p>
+                <p>[08:43] SQL Injection Attempt</p>
+                <p>[08:44] Multiple Requests Blocked</p>
+
+            </div>
+
+            <!-- Chart -->
+            <div class="chart-container">
+
+                <canvas id="threatChart"></canvas>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="footer-msg">
+
+                AI Engine Successfully Prevented
+                Potential Data Breach
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='chart.js') }}"></script>
+
+</body>
+</html>
